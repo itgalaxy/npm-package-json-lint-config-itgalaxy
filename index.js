@@ -63,6 +63,7 @@ const defaultConfig = {
     "valid-values-author": "off",
     "valid-values-private": "off",
     "valid-values-license": "off",
+    "valid-values-publishConfig": "off",
 
     "no-restricted-dependencies": "off",
     "no-restricted-pre-release-dependencies": "off",

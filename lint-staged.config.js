@@ -11,5 +11,5 @@ module.exports = {
     "remark -f -q",
     "git add"
   ],
-  "package.json": ["pjl-cli -q", "git add"]
+  "package.json": ["npmPkgJsonLint -q", "git add"]
 };
