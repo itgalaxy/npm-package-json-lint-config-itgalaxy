@@ -88,6 +88,13 @@ const defaultConfig = {
     "prefer-alphabetical-peerDependencies": "error",
 
     // Inherited from `npm-package-json-lint-config-default`
+    "description-format": [
+      "error",
+      {
+        requireCapitalFirstLetter: true,
+        requireEndingPeriod: true
+      }
+    ],
     // "name-format": "error",
     // "version-format": "error",
 

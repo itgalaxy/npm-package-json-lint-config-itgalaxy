@@ -1,7 +1,7 @@
 {
   "name": "npm-package-json-lint-config-itgalaxy",
-  "version": "2.0.0",
-  "description": "itgalaxy org's npm-package-json-lint config.",
+  "version": "3.0.0",
+  "description": "Itgalaxy org's npm-package-json-lint config.",
   "keywords": [
     "npm-package-json-lint",
     "npm-package-json-lint-config",
@@ -51,31 +51,32 @@
     "babel-eslint": "^8.2.2",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.9.0",
-    "eslint": "^4.17.0",
-    "eslint-plugin-ava": "^4.2.1",
+    "eslint": "^5.3.0",
+    "eslint-plugin-ava": "^5.0.0",
+    "eslint-plugin-html": "^4.0.5",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-itgalaxy": "^68.0.1",
+    "eslint-plugin-itgalaxy": "^74.0.0",
     "eslint-plugin-jest": "^21.12.1",
     "eslint-plugin-jsx-a11y": "^6.0.0",
     "eslint-plugin-lodash": "^2.4.3",
-    "eslint-plugin-node": "^6.0.0",
-    "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-markdown": "^1.0.0-beta.8",
+    "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.6.1",
-    "eslint-plugin-unicorn": "^4.0.1",
+    "eslint-plugin-unicorn": "^5.0.0",
     "husky": "^0.14.1",
     "is-plain-obj": "^1.1.0",
     "lint-staged": "^7.0.0",
-    "npm-package-json-lint": "^3.0.0",
+    "npm-package-json-lint": "^3.3.0",
     "npm-run-all": "^4.0.1",
-    "npmpub": "^3.1.0",
+    "npmpub": "^4.1.0",
     "nyc": "^12.0.2",
     "prettier": "^1.5.2",
     "remark-cli": "^5.0.0",
-    "remark-preset-lint-itgalaxy": "^12.0.0"
+    "remark-preset-lint-itgalaxy": "^13.0.0"
   },
   "peerDependencies": {
-    "npm-package-json-lint": "^3.0.0"
+    "npm-package-json-lint": "^3.3.0"
   },
   "ava": {
     "require": "babel-register",
