@@ -72,7 +72,7 @@
     "npmpub": "^4.1.0",
     "nyc": "^12.0.2",
     "prettier": "^1.5.2",
-    "remark-cli": "^5.0.0",
+    "remark-cli": "^6.0.0",
     "remark-preset-lint-itgalaxy": "^13.0.0"
   },
   "peerDependencies": {
