@@ -1,5 +1,4 @@
 const { NpmPackageJsonLint } = require("npm-package-json-lint");
-const test = require("ava");
 const isPlainObj = require("is-plain-obj");
 const config = require("./..");
 
@@ -7,19 +6,21 @@ function lint(packageJsonData, packageConfig) {
   return new NpmPackageJsonLint().lint(packageJsonData, packageConfig);
 }
 
-test("npm-package-json-lint config should be an object", t => {
-  t.true(isPlainObj(config) === true);
-});
+describe("npm-package-json-lint-config-itgalaxy", () => {
+  it("npm-package-json-lint config should be an object", () => {
+    expect(isPlainObj(config)).toBe(true);
+  });
 
-test("rules should be an object", t => {
-  t.true(isPlainObj(config.rules) === true);
-});
+  it("rules should be an object", () => {
+    expect(isPlainObj(config.rules)).toBe(true);
+  });
 
-test("npm-package-json-lint should run without failing", t => {
-  const packageJsonData = {
-    author: "Caitlin Snow"
-  };
-  const results = lint(packageJsonData, config.rules);
+  it("npm-package-json-lint should run without failing", () => {
+    const packageJsonData = {
+      author: "Caitlin Snow"
+    };
+    const results = lint(packageJsonData, config.rules);
 
-  t.true(results.issues.length === 9);
+    expect(results.issues).toMatchSnapshot();
+  });
 });
