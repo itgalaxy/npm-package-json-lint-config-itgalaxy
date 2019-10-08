@@ -1,10 +1,7 @@
+const path = require("path");
 const { NpmPackageJsonLint } = require("npm-package-json-lint");
 const isPlainObj = require("is-plain-obj");
-const config = require("./..");
-
-function lint(packageJsonData, packageConfig) {
-  return new NpmPackageJsonLint().lint(packageJsonData, packageConfig);
-}
+const config = require("..");
 
 describe("npm-package-json-lint-config-itgalaxy", () => {
   it("npm-package-json-lint config should be an object", () => {
@@ -16,11 +13,13 @@ describe("npm-package-json-lint-config-itgalaxy", () => {
   });
 
   it("npm-package-json-lint should run without failing", () => {
-    const packageJsonData = {
-      author: "Caitlin Snow"
-    };
-    const results = lint(packageJsonData, config.rules);
+    const npmPackageJsonLint = new NpmPackageJsonLint({
+      configFile: path.resolve(__dirname, "../index.js"),
+      cwd: path.resolve(__dirname),
+      patterns: ["fixtures"]
+    });
+    const results = npmPackageJsonLint.lint();
 
-    expect(results.issues).toMatchSnapshot();
+    expect(results).toMatchSnapshot();
   });
 });

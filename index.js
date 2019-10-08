@@ -1,8 +1,8 @@
 "use strict";
 
 const defaultConfig = {
-  extends: "npm-package-json-lint-config-default",
   rules: {
+    // Require node rules
     "require-author": "error",
     "require-bin": "off",
     "require-bugs": "error",
@@ -19,67 +19,79 @@ const defaultConfig = {
     "require-homepage": "error",
     "require-keywords": "error",
     "require-license": "error",
-    "require-main": "off",
+    "require-main": "error",
     "require-man": "off",
     "require-module": "off",
-    // Inherited from `npm-package-json-lint-config-default`
-    // "require-name": "error",
+    "require-name": "error",
     "require-optionalDependencies": "off",
     "require-os": "off",
     "require-peerDependencies": "off",
     "require-preferGlobal": "off",
     "require-private": "off",
     "require-publishConfig": "off",
+    "require-repository-directory": "off",
     "require-repository": "error",
     "require-scripts": "off",
-    // Inherited from `npm-package-json-lint-config-default`
-    // "require-version": "error",
+    "require-types": "off",
+    "require-typings": "off",
+    "require-version": "error",
 
-    // Inherited from `npm-package-json-lint-config-default`
-    // "bin-type": "error",
-    // "config-type": "error",
-    // "cpu-type": "error",
-    // "dependencies-type": "error",
-    // "description-type": "error",
-    // "devDependencies-type": "error",
-    // "directories-type": "error",
-    // "engines-type": "error",
-    // "files-type": "error",
-    // "homepage-type": "error",
-    // "keywords-type": "error",
-    // "license-type": "error",
-    // "main-type": "error",
-    // "man-type": "error",
-    // "name-type": "error",
-    // "optionalDependencies-type": "error",
-    // "os-type": "error",
-    // "peerDependencies-type": "error",
-    // "preferGlobal-type": "error",
-    // "private-type": "error",
-    // "repository-type": "error",
-    // "scripts-type": "error",
-    // "version-type": "error",
+    // Type rules
+    "bin-type": "error",
+    "bundledDependencies-type": "error",
+    "config-type": "error",
+    "cpu-type": "error",
+    "dependencies-type": "error",
+    "description-type": "error",
+    "devDependencies-type": "error",
+    "directories-type": "error",
+    "engines-type": "error",
+    "files-type": "error",
+    "homepage-type": "error",
+    "keywords-type": "error",
+    "license-type": "error",
+    "main-type": "error",
+    "man-type": "error",
+    "name-type": "error",
+    "optionalDependencies-type": "error",
+    "os-type": "error",
+    "peerDependencies-type": "error",
+    "preferGlobal-type": "error",
+    "private-type": "error",
+    "repository-type": "error",
+    "scripts-type": "error",
+    "version-type": "error",
 
+    // Valid value rules
     "valid-values-author": "off",
-    "valid-values-private": "off",
+    "valid-values-engines": "off",
     "valid-values-license": "off",
+    "valid-values-name-scope": "off",
+    "valid-values-private": "off",
     "valid-values-publishConfig": "off",
 
+    // Dependency rules
+    "no-absolute-version-dependencies": "off",
+    "no-caret-version-dependencies": "off",
     "no-restricted-dependencies": "off",
     "no-restricted-pre-release-dependencies": "off",
-    "prefer-no-version-zero-dependencies": "off",
+    "no-tilde-version-dependencies": "off",
     "prefer-absolute-version-dependencies": "off",
-    "prefer-caret-version-dependencies": "off",
-    "prefer-tilde-version-dependencies": "off",
     "prefer-alphabetical-dependencies": "error",
+    "prefer-caret-version-dependencies": "off",
+    "prefer-no-version-zero-dependencies": "off",
+    "prefer-tilde-version-dependencies": "off",
 
+    "no-absolute-version-devDependencies": "off",
+    "no-caret-version-devDependencies": "off",
     "no-restricted-devDependencies": "off",
     "no-restricted-pre-release-devDependencies": "off",
-    "prefer-no-version-zero-devDependencies": "off",
+    "no-tilde-version-devDependencies": "off",
     "prefer-absolute-version-devDependencies": "off",
-    "prefer-caret-version-devDependencies": "off",
-    "prefer-tilde-version-devDependencies": "off",
     "prefer-alphabetical-devDependencies": "error",
+    "prefer-caret-version-devDependencies": "off",
+    "prefer-no-version-zero-devDependencies": "off",
+    "prefer-tilde-version-devDependencies": "off",
 
     "prefer-alphabetical-bundledDependencies": "error",
 
@@ -87,7 +99,7 @@ const defaultConfig = {
 
     "prefer-alphabetical-peerDependencies": "error",
 
-    // Inherited from `npm-package-json-lint-config-default`
+    // Format rules
     "description-format": [
       "error",
       {
@@ -95,14 +107,16 @@ const defaultConfig = {
         requireEndingPeriod: true
       }
     ],
-    // "name-format": "error",
-    // "version-format": "error",
+    "name-format": "error",
+    "version-format": "error",
 
+    // Package.json property rules
     "prefer-property-order": [
       "error",
       [
         "name",
         "version",
+        "private",
         "description",
         "keywords",
         "homepage",
@@ -112,8 +126,13 @@ const defaultConfig = {
         "contributors",
         "files",
         "main",
+        "browser",
+        "module",
         "jsnext:main",
         "bin",
+        "style",
+        "types",
+        "typings",
         "man",
         "directories",
         "repository",
@@ -130,12 +149,13 @@ const defaultConfig = {
         "os",
         "cpu",
         "preferGlobal",
-        "private",
         "publishConfig"
       ]
     ],
 
-    "prefer-no-engineStrict": "error"
+    // Disallowed node rules
+    "prefer-no-engineStrict": "error",
+    "prefer-no-devDependencies": "off"
   }
 };
 
