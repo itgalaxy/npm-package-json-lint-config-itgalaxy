@@ -1,18 +1,15 @@
 "use strict";
 
 module.exports = {
-  ignore: ["package-lock.json"],
-  linters: {
-    "*.{js,mjs,jsx}": [
-      "prettier --list-different",
-      "eslint --report-unused-disable-directives",
-      "git add"
-    ],
-    "*.{md,markdown,mdown,mkdn,mkd,mdwn,mkdown,ron}": [
-      "prettier --list-different",
-      "remark -f -q",
-      "git add"
-    ],
-    "package.json": ["npmPkgJsonLint -q", "git add"]
-  }
+  "*.{js,mjs,jsx}": [
+    "prettier --list-different",
+    "eslint --report-unused-disable-directives",
+    "git add"
+  ],
+  "*.{md,markdown,mdown,mkdn,mkd,mdwn,mkdown,ron}": [
+    "prettier --list-different",
+    "remark -f -q",
+    "git add"
+  ],
+  "*.{yml,yaml}": ["prettier --list-different", "git add"]
 };

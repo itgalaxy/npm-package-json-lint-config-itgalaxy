@@ -1,60 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`npm-package-json-lint-config-itgalaxy npm-package-json-lint should run without failing 1`] = `
-Array [
-  LintIssue {
-    "lintId": "require-bugs",
-    "lintMessage": "bugs is required",
-    "node": "bugs",
-    "severity": "error",
-  },
-  LintIssue {
-    "lintId": "require-contributors",
-    "lintMessage": "contributors is required",
-    "node": "contributors",
-    "severity": "error",
-  },
-  LintIssue {
-    "lintId": "require-description",
-    "lintMessage": "description is required",
-    "node": "description",
-    "severity": "error",
-  },
-  LintIssue {
-    "lintId": "require-engines",
-    "lintMessage": "engines is required",
-    "node": "engines",
-    "severity": "error",
-  },
-  LintIssue {
-    "lintId": "require-files",
-    "lintMessage": "files is required",
-    "node": "files",
-    "severity": "error",
-  },
-  LintIssue {
-    "lintId": "require-homepage",
-    "lintMessage": "homepage is required",
-    "node": "homepage",
-    "severity": "error",
-  },
-  LintIssue {
-    "lintId": "require-keywords",
-    "lintMessage": "keywords is required",
-    "node": "keywords",
-    "severity": "error",
-  },
-  LintIssue {
-    "lintId": "require-license",
-    "lintMessage": "license is required",
-    "node": "license",
-    "severity": "error",
-  },
-  LintIssue {
-    "lintId": "require-repository",
-    "lintMessage": "repository is required",
-    "node": "repository",
-    "severity": "error",
-  },
-]
+Object {
+  "errorCount": 12,
+  "ignoreCount": 0,
+  "results": Array [
+    Object {
+      "errorCount": 12,
+      "filePath": "./fixtures/package.json",
+      "ignored": false,
+      "issues": Array [
+        LintIssue {
+          "lintId": "require-author",
+          "lintMessage": "author is required",
+          "node": "author",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-bugs",
+          "lintMessage": "bugs is required",
+          "node": "bugs",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-contributors",
+          "lintMessage": "contributors is required",
+          "node": "contributors",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-description",
+          "lintMessage": "description is required",
+          "node": "description",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-engines",
+          "lintMessage": "engines is required",
+          "node": "engines",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-files",
+          "lintMessage": "files is required",
+          "node": "files",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-homepage",
+          "lintMessage": "homepage is required",
+          "node": "homepage",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-keywords",
+          "lintMessage": "keywords is required",
+          "node": "keywords",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-license",
+          "lintMessage": "license is required",
+          "node": "license",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-main",
+          "lintMessage": "main is required",
+          "node": "main",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-repository",
+          "lintMessage": "repository is required",
+          "node": "repository",
+          "severity": "error",
+        },
+        LintIssue {
+          "lintId": "require-version",
+          "lintMessage": "version is required",
+          "node": "version",
+          "severity": "error",
+        },
+      ],
+      "warningCount": 0,
+    },
+  ],
+  "warningCount": 0,
+}
 `;
