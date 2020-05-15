@@ -99,13 +99,17 @@ const defaultConfig = {
 
     "prefer-alphabetical-peerDependencies": "error",
 
+    // Scripts rules
+    "prefer-alphabetical-scripts": "off",
+    "prefer-scripts": "off",
+
     // Format rules
     "description-format": [
       "error",
       {
         requireCapitalFirstLetter: true,
-        requireEndingPeriod: true
-      }
+        requireEndingPeriod: true,
+      },
     ],
     "name-format": "error",
     "version-format": "error",
@@ -149,14 +153,14 @@ const defaultConfig = {
         "os",
         "cpu",
         "preferGlobal",
-        "publishConfig"
-      ]
+        "publishConfig",
+      ],
     ],
 
     // Disallowed node rules
     "prefer-no-engineStrict": "error",
-    "prefer-no-devDependencies": "off"
-  }
+    "prefer-no-devDependencies": "off",
+  },
 };
 
 module.exports = defaultConfig;

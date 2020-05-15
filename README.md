@@ -36,7 +36,7 @@ Add the following to your `.npmpackagejsonlintrc.json` or `npmpackagejsonlint.co
 
 ```js
 module.exports = {
-  extends: "npm-package-json-lint-config-itgalaxy"
+  extends: "npm-package-json-lint-config-itgalaxy",
 };
 ```
 
@@ -48,8 +48,8 @@ If you need to override a rule, your `.npmpackagejsonlintrc.json` or `npmpackage
 module.exports = {
   extends: "npm-package-json-lint-config-itgalaxy",
   rules: {
-    "license-type": "off"
-  }
+    "license-type": "off",
+  },
 };
 ```
 
@@ -85,8 +85,8 @@ A: Just disable `require-main` rule.
 module.exports = {
   extends: "npm-package-json-lint-config-itgalaxy",
   rules: {
-    "require-main": "off"
-  }
+    "require-main": "off",
+  },
 };
 ```
 

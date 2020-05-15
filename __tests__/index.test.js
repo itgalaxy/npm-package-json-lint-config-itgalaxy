@@ -16,7 +16,7 @@ describe("npm-package-json-lint-config-itgalaxy", () => {
     const npmPackageJsonLint = new NpmPackageJsonLint({
       configFile: path.resolve(__dirname, "../index.js"),
       cwd: path.resolve(__dirname),
-      patterns: ["fixtures"]
+      patterns: ["fixtures"],
     });
     const results = npmPackageJsonLint.lint();
 

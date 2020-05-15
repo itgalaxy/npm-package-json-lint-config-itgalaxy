@@ -4,7 +4,7 @@ module.exports = {
   extends: [
     "plugin:itgalaxy/script",
     "plugin:itgalaxy/esnext",
-    "plugin:itgalaxy/node"
+    "plugin:itgalaxy/node",
   ],
   overrides: [
     // Tests
@@ -14,8 +14,8 @@ module.exports = {
       files: ["**/__tests__/**/*", "**/__mocks__/**/*"],
       rules: {
         // Allow to use `console` (example - `mocking`)
-        "no-console": "off"
-      }
+        "no-console": "off",
+      },
     },
 
     // Markdown
@@ -28,9 +28,9 @@ module.exports = {
         "import/no-unresolved": "off",
         "node/no-unpublished-require": "off",
         "node/no-unpublished-import": "off",
-        "unicorn/filename-case": "off"
-      }
-    }
+        "unicorn/filename-case": "off",
+      },
+    },
   ],
-  root: true
+  root: true,
 };

@@ -1,6 +1,6 @@
 {
   "name": "npm-package-json-lint-config-itgalaxy",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Itgalaxy org's npm-package-json-lint config.",
   "keywords": [
     "npm-package-json-lint",
@@ -29,10 +29,10 @@
     "url": "https://github.com/itgalaxy/npm-package-json-lint-config-itgalaxy.git"
   },
   "scripts": {
-    "lint:package": "npmPkgJsonLint --quiet .",
-    "lint:js": "eslint . --cache --ignore-pattern \"**/fixtures/**/*\" --ignore-path .gitignore --ext \"js,.cjs,.mjs,.jsx,.md\"",
-    "lint:prettier": "prettier --list-different \"{lib,__tests__}/**/*.{js,cjs,mjs,jsx,md,yml,yaml}\" \"*.{js,cjs,mjs,jsx,md,yml,yaml}\"",
-    "lint:md": "remark . -i .gitignore -f -q",
+    "lint:package": "npmPkgJsonLint --quiet  \"*.json\"",
+    "lint:js": "eslint --cache --ignore-pattern \"**/fixtures/**/*\" --ignore-path .gitignore --ext \"js,.cjs,.mjs,.jsx,.md\" .",
+    "lint:prettier": "prettier --ignore-path .gitignore --list-different .",
+    "lint:md": "remark -i .gitignore -f -q .",
     "lint": "npm-run-all -l -p \"lint:**\"",
     "prettier": "npm run lint:prettier -- --write",
     "fix:js": "npm run lint:js -- --fix",
@@ -44,35 +44,35 @@
     "release": "standard-version"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.1",
-    "eslint-plugin-ava": "^9.0.0",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-itgalaxy": "^113.0.0",
-    "eslint-plugin-jest": "^22.17.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.0.0",
+    "eslint-plugin-ava": "^10.3.0",
+    "eslint-plugin-html": "^6.0.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-itgalaxy": "^126.0.0",
+    "eslint-plugin-jest": "^23.11.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-lodash": "^6.0.0",
-    "eslint-plugin-markdown": "^1.0.0",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-lodash": "^7.1.0",
+    "eslint-plugin-markdown": "^1.0.2",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-unicorn": "^12.0.2",
-    "husky": "^3.0.8",
-    "is-plain-obj": "^2.0.0",
-    "jest": "^24.9.0",
-    "lint-staged": "^9.4.2",
-    "npm-package-json-lint": "^4.0.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-unicorn": "^20.0.0",
+    "husky": "^4.2.5",
+    "is-plain-obj": "^2.1.0",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.2",
+    "npm-package-json-lint": "^5.1.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.18.2",
-    "remark-cli": "^7.0.0",
+    "prettier": "^2.0.5",
+    "remark-cli": "^8.0.0",
     "remark-preset-lint-itgalaxy": "^15.0.0",
-    "standard-version": "^7.0.0"
+    "standard-version": "^8.0.0"
   },
   "peerDependencies": {
-    "npm-package-json-lint": "^4.0.0"
+    "npm-package-json-lint": "^5.0.0"
   },
   "engines": {
-    "node": ">= 8.9.0"
+    "node": ">= 10.13.0"
   }
 }
